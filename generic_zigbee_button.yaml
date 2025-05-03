@@ -42,13 +42,13 @@ action:
 - choose:
   - conditions:
     - condition: template
-      value_template: '{{ trigger.event.data.command == "single" }}'
+      value_template: '{{ trigger.event.data.command == "remote_button_short_press" }}'
     sequence: !input 'press_action'
   - conditions:
     - condition: template
-      value_template: '{{ trigger.event.data.command == "double" }}'
+      value_template: '{{ trigger.event.data.command == "remote_button_double_press" }}'
     sequence: !input 'double_press_action'
   - conditions:
     - condition: template
-      value_template: '{{ trigger.event.data.command == "hold" }}'
+      value_template: '{{ trigger.event.data.command == "remote_button_long_press" }}'
     sequence: !input 'hold_action'
